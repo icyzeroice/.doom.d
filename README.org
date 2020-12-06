@@ -1,0 +1,7 @@
+#+TITLE: Doom Emacs Customize Config
+
+
+
+
+
+# file ends here
