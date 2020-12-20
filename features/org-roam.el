@@ -18,7 +18,7 @@
 ;;   (org-roam-server-mode))
 
 
-(add-hook! org-roam-server-mode
+(add-hook! org-roam-mode
            (setq org-roam-server-host "127.0.0.1"
                  org-roam-server-port 23333
                  org-roam-server-authenticate nil

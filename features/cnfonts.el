@@ -13,6 +13,8 @@
 ;; font config copied from cnfonts package
 (defun hyouka/cnfonts ()
 
+  (set-language-environment "UTF-8")
+
   (pcase system-type
 
     ('windows-nt (progn (set-face-attribute
