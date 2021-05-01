@@ -60,5 +60,6 @@
 (load! "features/cnfonts")
 (load! "features/org-roam")
 ;; (load! "features/org")
+(load! "feature/wakatime")
 
 ;; file ends here
