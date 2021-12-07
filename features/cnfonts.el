@@ -7,7 +7,7 @@
 ;; https://github.com/tumashu/cnfonts
 ;; https://lists.gnu.org/archive/html/emacs-devel/2006-12/msg00285.html
 
-;; (cnfonts-enable)
+;; (cnfonts-mode)
 
 ;; font config copied from cnfonts package
 (defun hyouka/cnfonts ()
@@ -46,7 +46,7 @@
                                   :slant 'normal
                                   :size 15.0)))))
 
-    (code (progn (cnfonts-enable)
+    (code (progn (cnfonts-mode)
                  (message "Unhandled system-type %S" code)))))
 
 

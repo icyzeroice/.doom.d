@@ -29,7 +29,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Codespaces/org-mode-base")
+(setq org-directory "~/Codespaces/org-mode-base/")
 (setq org-startup-folded t)
 ;; org todo
 ;; https://orgmode.org/manual/Tracking-TODO-state-changes.html
@@ -54,15 +54,15 @@
 ;;                                   :unnarrowed t))
 
 ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Time-Parsing.html
-org-roam-dailies-capture-templates '(("d" "default" entry
+(setq org-roam-dailies-capture-templates '(("d" "default" entry
                                     "* %?"
                                     :if-new (file+head "%<%Y-%m-%d-%V-%u>.org"
-                                                       "#+title: %<(%V/52) %Y %B %d, %A>\n")))
+                                                       "#+title: %<(%V/52) %Y %B %d, %A>\n"))))
 
 
 ;; >>> org mode more settings >>>
-org-agenda-files (list (concat org-directory "agenda/")
-                     (concat org-roam-directory "journal/"))
+(setq org-agenda-files (list (concat org-directory "agenda/")
+                     (concat org-roam-directory "journal/")))
 
 
 ;; >>> org mode enhanced plugins >>>
@@ -110,6 +110,6 @@ org-agenda-files (list (concat org-directory "agenda/")
 (load! "features/cnfonts")
 (load! "features/org-roam")
 ;; (load! "features/org")
-(load! "feature/wakatime")
+(load! "features/wakatime")
 
 ;; file ends here
