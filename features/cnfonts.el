@@ -5,10 +5,9 @@
 ;; Oh, MyGod! 中文对齐了吗Example
 ;; ---------------------------------------------------------
 ;; https://github.com/tumashu/cnfonts
-
+;; https://lists.gnu.org/archive/html/emacs-devel/2006-12/msg00285.html
 
 ;; (cnfonts-enable)
-
 
 ;; font config copied from cnfonts package
 (defun hyouka/cnfonts ()
