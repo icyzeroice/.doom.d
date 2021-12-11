@@ -68,23 +68,21 @@
 
   (if (display-graphic-p)
 
-      (set-face-attribute
-       'default nil
-       :font (font-spec :name "-outline-JetBrains Mono-bold-italic-normal-mono-*-*-*-*-c-*-iso10646-1"
-                        :weight 'normal
-                        :slant 'normal
-                        :size 12.0))
-    (dolist (charset '(kana han symbol cjk-misc bopomofo))
-      (set-fontset-font
-       (frame-parameter nil 'font)
-       charset
-       (font-spec :name "-outline-Source Han Serif VF-normal-normal-normal-sans-*-*-*-*-p-*-iso10646-1"
-                  :weight 'normal
-                  :slant 'normal
-                  :size 16.0)))
-    )
-
-  )
+      (progn (set-face-attribute
+              'default nil
+              :font (font-spec :name "-outline-JetBrains Mono-bold-italic-normal-mono-*-*-*-*-c-*-iso10646-1"
+                               :weight 'normal
+                               :slant 'normal
+                               :size 12.0))
+             (dolist (charset '(kana han symbol cjk-misc bopomofo))
+               (set-fontset-font
+                (frame-parameter nil 'font)
+                charset
+                (font-spec :name "-outline-Source Han Serif VF-normal-normal-normal-sans-*-*-*-*-p-*-iso10646-1"
+                           :weight 'normal
+                           :slant 'normal
+                           :size 16.0))))
+    nil))
 
 
 (hyouka/cnfonts)

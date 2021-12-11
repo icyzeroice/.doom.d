@@ -107,7 +107,7 @@
 
 
 (load! "features/emacs")
-(load! "features/cnfonts")
+;; (load! "features/cnfonts")
 (load! "features/org-roam")
 ;; (load! "features/org")
 (load! "features/wakatime")

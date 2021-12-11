@@ -190,4 +190,8 @@
 
        :config
        ;;literate
-       (default +bindings +smartparens))
+       (default +bindings +smartparens)
+
+       :personal
+       fonts
+       )
