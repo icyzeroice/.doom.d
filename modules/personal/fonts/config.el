@@ -28,7 +28,7 @@
 (use-package! cnfonts
   ;; :commands cnfonts-mode
   :init
-  (cnfonts-mode)
+  (cnfonts-mode 1)
   :config
   (setq cnfonts-directory "~/.doom.d/modules/personal/fonts/cnfonts/"
         cnfonts-profiles '("adobe-jetbrains" "default" "test")
