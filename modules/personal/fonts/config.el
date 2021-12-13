@@ -32,7 +32,7 @@
   :config
   (setq cnfonts-directory "~/.doom.d/modules/personal/fonts/cnfonts/"
         cnfonts-profiles '("adobe-jetbrains" "default" "test")
-        ;; cnfonts-use-system-type t
+        cnfonts-use-system-type t
         cnfonts-personal-fontnames '(;; English Fontset
                                      ("JetBrains Mono")
                                      ;; Chinese Fontset
