@@ -29,6 +29,9 @@
   ;; :commands cnfonts-mode
   :init
   (cnfonts-mode 1)
+  ;; `cnfonts-set-font' 帮助我们应用当前字体大小配置
+  (cnfonts-set-font)
+
   :config
   (setq cnfonts-directory "~/.doom.d/modules/personal/fonts/cnfonts/"
         cnfonts-profiles '("adobe-jetbrains" "default" "test")
