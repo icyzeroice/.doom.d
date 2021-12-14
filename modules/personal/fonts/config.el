@@ -30,7 +30,7 @@
   :init
   (cnfonts-mode 1)
   ;; `cnfonts-set-font' 帮助我们应用当前字体大小配置
-  (cnfonts-set-font)
+  ;; (cnfonts-set-font)
 
   :config
   (setq cnfonts-directory "~/.doom.d/modules/personal/fonts/cnfonts/"
@@ -39,5 +39,5 @@
         cnfonts-personal-fontnames '(;; English Fontset
                                      ("JetBrains Mono")
                                      ;; Chinese Fontset
-                                     ("Source Han Sans VF" "Source Han Serif VF"))
-        ))
+                                     ("Source Han Sans VF" "Source Han Serif VF")))
+  )
