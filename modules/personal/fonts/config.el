@@ -26,9 +26,9 @@
 
 ;; https://github.com/tumashu/cnfonts
 (use-package! cnfonts
-  ;; :commands cnfonts-mode
-  :init
-  (cnfonts-mode 1)
+  :defer t
+  ;; :init
+  ;; (cnfonts-mode 1)
   ;; `cnfonts-set-font' 帮助我们应用当前字体大小配置
   ;; (cnfonts-set-font)
 
@@ -40,4 +40,6 @@
                                      ("JetBrains Mono")
                                      ;; Chinese Fontset
                                      ("Source Han Sans VF" "Source Han Serif VF")))
+
+  :hook (('after-make-frame-functions . cnfonts-mode) ('window-setup-hook . cnfonts-mode))
   )
