@@ -54,10 +54,18 @@
 ;;                                   :unnarrowed t))
 
 ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Time-Parsing.html
-(setq org-roam-dailies-capture-templates '(("d" "default" entry
-                                    "* %?"
-                                    :if-new (file+head "%<%Y-%m-%d-%V-%u>.org"
-                                                       "#+title: %<(%V/52) %Y %B %d, %A>\n"))))
+;; 之前这样写，虽然 org-roam 正常，但是 org-journal 不能工作
+;; (setq org-roam-dailies-capture-templates
+;;       '(("d" "default" entry
+;;          "* %?"
+;;          :target (file+head "%<%Y-%m-%d-%V-%u>.org"
+;;                             "#+title: %<(%V/52) %Y %B %d, %A>\n"))))
+
+(setq org-roam-dailies-capture-templates
+      '(("d" "default" entry
+         "* %?"
+         :target (file+head "%<%Y-%m-%d>.org"
+                            "#+title: %<%Y-%m-%d>\n"))))
 
 
 ;; >>> org mode more settings >>>
@@ -68,10 +76,14 @@
 ;; >>> org mode enhanced plugins >>>
 (setq org-download-method 'attach)
 (setq org-journal-dir (concat org-roam-directory "journal/"))
-(setq org-journal-file-format "%Y-%m-%d-%V-%u.org")
+(setq org-journal-file-format "%Y-%m-%d.org")
+;; (setq org-journal-file-format "%Y-%m-%d-%V-%u.org")
 (setq org-journal-date-prefix "#+title: ")
-(setq org-journal-date-format "(%V/52) %Y %B %d, %A")
+;; (setq org-journal-date-prefix "#+title: ")
+(setq org-journal-date-format "%Y-%m-%d")
+;; (setq org-journal-date-format "(%V/52) %Y %B %d, %A")
 (setq org-journal-time-prefix "* ")
+;; (setq org-journal-time-prefix "* ")
 ;; (setq org-journal-time-format "")
 ;; <<< [org-roam] <<<
 
