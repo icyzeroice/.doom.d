@@ -30,18 +30,18 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Codespaces/org-mode-base/")
-(setq org-startup-folded t)
-;; org todo
-;; https://orgmode.org/manual/Tracking-TODO-state-changes.html
-;; https://www.reddit.com/r/orgmode/comments/hcoez9/which_keywords_do_you_use_for_your_orgmode/
-;; (setq org-todo-keywords '((sequence "TODO(t)" "STARTED(s!)" "SUSPENDED(p@)" "RESUMED(r@)" "DELEGATED(a)" "|" "DONE(d!)" "CANCELED(c@/@)")))
-(setq org-todo-keywords '((sequence "IDEA(i)" "TODO(t)" "STRT(s!)" "WAIT(p@)" "RESUMED(r@)" "|" "DONE(d!)" "KILL(c@/@)")))
-(setq org-log-into-drawer "LOGBOOK")
-;; https://orgmode.org/manual/Attachment-options.html#Attachment-options
-(setq org-attach-dir-relative t)
-(setq org-attach-preferred-new-method 'dir)
-;; https://emacs-china.org/t/emacs/15765/7
-;; org-export-with-tags nil
+
+;; https://github.com/hlissner/doom-emacs/issues/2913
+(after! org
+  (setq org-startup-folded t)
+  (setq org-todo-keywords '((sequence "IDEA(i)" "TODO(t)" "BUSY(b)" "WAIT(w)" "PUSH(p)" "|" "DONE(d)" "KILL(c)")))
+  (setq org-log-into-drawer "LOGBOOK")
+  ;; https://orgmode.org/manual/Attachment-options.html#Attachment-options
+  (setq org-attach-dir-relative t)
+  (setq org-attach-preferred-new-method 'dir)
+  ;; https://emacs-china.org/t/emacs/15765/7
+  ;; org-export-with-tags nil
+  )
 
 ;; >>> [org-roam] >>>
 (setq org-roam-directory (concat org-directory "roam/"))
