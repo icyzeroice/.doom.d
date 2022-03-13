@@ -196,4 +196,5 @@
        fonts
        wakatime
        orui
+       zotero
        )
