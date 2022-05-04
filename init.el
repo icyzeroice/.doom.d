@@ -194,7 +194,7 @@
 
        :personal
        fonts
-       wakatime
+       ;; wakatime
        orui
        zotero
        )
