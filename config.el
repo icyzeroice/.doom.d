@@ -118,6 +118,8 @@
 ;; ---------------------------------------------------------
 (setq plantuml-default-exec-mode 'jar)
 
+(setq emojify-emoji-set "twemoji-v14")
+
 
 (load! "features/emacs")
 
