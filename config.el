@@ -74,6 +74,15 @@
                      (concat org-roam-directory "journal/")))
 
 
+;; https://stackoverflow.com/questions/3973896/emacs-org-mode-file-viewer-associations
+(add-hook 'org-mode-hook
+      '(lambda ()
+             (setq org-file-apps
+                   (append '(
+                             ("\\.png\\'" . default)
+                             ) org-file-apps ))))
+
+
 ;; >>> org mode enhanced plugins >>>
 (setq org-download-method 'attach)
 (setq org-journal-dir (concat org-roam-directory "journal/"))
