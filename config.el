@@ -98,6 +98,13 @@
 ;; (setq org-journal-time-format "")
 ;; <<< [org-roam] <<<
 
+
+;; >>> [bibtex] >>>
+;; https://github.com/doomemacs/doomemacs/tree/master/modules/tools/biblio
+(setq! citar-bibliography '("/mnt/c/Users/Hyouka/Applications/AppData/Zotero/My Library.bib"))
+
+;; <<< [bibtex] <<<
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
@@ -129,6 +136,8 @@
 (setq plantuml-default-exec-mode 'jar)
 
 (setq emojify-emoji-set "twemoji-v14")
+
+
 
 
 (load! "features/emacs")
