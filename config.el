@@ -99,9 +99,25 @@
 ;; <<< [org-roam] <<<
 
 
-;; >>> [bibtex] >>>
-;; https://github.com/doomemacs/doomemacs/tree/master/modules/tools/biblio
-(setq! citar-bibliography '("/mnt/c/Users/Hyouka/Applications/AppData/Zotero/My Library.bib"))
+;; ---------------------------------------------------------
+;; Zotero Better BibTeX
+;; ---------------------------------------------------------
+(pcase system-type
+  ('darwin (progn
+             ;; >>> [bibtex] >>>
+             ;; https://github.com/doomemacs/doomemacs/tree/master/modules/tools/biblio
+             (setq! citar-bibliography '("/Users/didi/Documents/OneDrive - mail.scut.edu.cn/Apps/zotero-better-bibtex/MyLibrary.bib"))
+             ))
+
+  ('gnu/linux (progn (when (string-match "microsoft" (shell-command-to-string "uname -a"))
+                       ;; >>> [bibtex] >>>
+                       ;; https://github.com/doomemacs/doomemacs/tree/master/modules/tools/biblio
+                       (setq! citar-bibliography '("/mnt/c/Users/Hyouka/Applications/AppData/Zotero/My Library.bib"))
+
+                       )))
+  )
+
+
 
 ;; <<< [bibtex] <<<
 
