@@ -35,6 +35,7 @@
 ;; https://github.com/hlissner/doom-emacs/issues/2913
 (after! org
   (setq org-startup-folded t)
+  (setq org-hide-block-startup t)
   (setq org-todo-keywords '((sequence "IDEA(i)" "TODO(t)" "BUSY(b)" "WAIT(w)" "PUSH(p)" "|" "DONE(d)" "KILL(k)")))
   (setq org-log-into-drawer "LOGBOOK")
   ;; https://orgmode.org/manual/Attachment-options.html#Attachment-options
