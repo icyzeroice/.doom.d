@@ -72,8 +72,8 @@
 
 
 ;; >>> org mode more settings >>>
-(setq org-agenda-files (list (concat org-directory "agenda/")
-                     (concat org-roam-directory "journal/")))
+;; (setq org-agenda-files (list (concat org-directory "agenda/")
+;;                      (concat org-roam-directory "journal/")))
 
 
 ;; https://stackoverflow.com/questions/3973896/emacs-org-mode-file-viewer-associations
