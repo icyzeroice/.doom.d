@@ -2,7 +2,8 @@
 
 ;; ---------------------------------------------------------
 ;; Chinese aligment
-;; Oh, MyGod! 中文对齐了吗Example
+;; ABCDefghIJKLMNopqrstUVWXYZ
+;; 一二三四五六七八九十十三字
 ;; ---------------------------------------------------------
 ;; https://github.com/tumashu/cnfonts
 ;; https://lists.gnu.org/archive/html/emacs-devel/2006-12/msg00285.html
@@ -27,10 +28,10 @@
 ;; https://github.com/tumashu/cnfonts
 (use-package! cnfonts
   :defer t
-  ;; :init
-  ;; (cnfonts-mode 1)
+  :init
+  (cnfonts-mode 1)
   ;; `cnfonts-set-font' 帮助我们应用当前字体大小配置
-  ;; (cnfonts-set-font)
+  (cnfonts-set-font)
 
   :config
   (setq cnfonts-directory "~/.doom.d/modules/personal/fonts/cnfonts/"
