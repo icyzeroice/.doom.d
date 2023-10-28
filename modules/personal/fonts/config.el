@@ -38,6 +38,7 @@
         cnfonts-profiles '("adobe-jetbrains" "default" "test")
         cnfonts-use-system-type t
         cnfonts-personal-fontnames '(;; English Fontset
+                                     ("Ubuntu Mono")
                                      ("JetBrains Mono")
                                      ;; Chinese Fontset
                                      ("Source Han Sans VF" "Source Han Serif VF")))
