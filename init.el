@@ -196,6 +196,7 @@
 
        :personal
        fonts
+       preview-org
        ;; wakatime
        orui
        )
