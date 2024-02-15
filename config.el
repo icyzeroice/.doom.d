@@ -43,6 +43,7 @@
   (setq org-attach-preferred-new-method 'dir)
   ;; https://emacs-china.org/t/emacs/15765/7
   ;; org-export-with-tags nil
+  (setq org-capture-templates '(("n" "Personal notes" entry (file+headline (concat org-directory "entities/" (org-id-uuid) ".org") "Index") "* %u %?\n%i" :prepend t)))
   )
 
 ;; >>> [org-roam] >>>
@@ -55,6 +56,8 @@
 ;; org-roam-capture-ref-templates '(("r" "ref" plain "%?" :if-new
 ;;                                   (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
 ;;                                   :unnarrowed t))
+
+
 
 ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Time-Parsing.html
 ;; 之前这样写，虽然 org-roam 正常，但是 org-journal 不能工作
