@@ -44,7 +44,8 @@
   ;; https://emacs-china.org/t/emacs/15765/7
   ;; org-export-with-tags nil
   ;; `org-capture-templates': when relative path, file is created under `org-directory'
-  (setq org-capture-templates `(("n" "Personal notes" entry (file ,(concat "entities/" (org-id-uuid) ".org")) "#+DATE: %u\n\n* Appendix\n** Keywords\n- %?\n%i" :prepend t)))
+  (defun random-uuid-org-file (path) (concat path (org-id-uuid) ".org"))
+  (setq org-capture-templates `(("n" "Personal notes" entry (file (lambda () (random-uuid-org-file ""))) "\n\n* Appendix\n** Keywords\n- %?\n%i" :prepend t)))
   )
 
 ;; >>> [org-roam] >>>
