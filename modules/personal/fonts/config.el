@@ -35,10 +35,10 @@
 
   :config
   (setq cnfonts-directory (concat doom-user-dir "modules/personal/fonts/cnfonts/")
-        cnfonts-profiles '("adobe-jetbrains" "default" "test")
+        cnfonts-profiles '("adobe-jetbrains")
         cnfonts-use-system-type t
         cnfonts-personal-fontnames '(;; English Fontset
-                                     ("Ubuntu Mono" "JetBrains Mono")
+                                     ("JetBrains Mono" "Ubuntu Mono")
                                      ;; Chinese Fontset
                                      ("Source Han Sans VF" "Source Han Serif VF")))
 
