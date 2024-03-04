@@ -34,7 +34,7 @@
   (cnfonts-set-font)
 
   :config
-  (setq cnfonts-directory "~/.doom.d/modules/personal/fonts/cnfonts/"
+  (setq cnfonts-directory (concat doom-user-dir "modules/personal/fonts/cnfonts/")
         cnfonts-profiles '("adobe-jetbrains" "default" "test")
         cnfonts-use-system-type t
         cnfonts-personal-fontnames '(;; English Fontset
