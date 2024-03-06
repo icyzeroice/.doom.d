@@ -27,11 +27,13 @@
 
 ;; https://github.com/tumashu/cnfonts
 (use-package! cnfonts
-  :defer nil
+  :defer t
   :init
-  (cnfonts-mode 1)
+  ;; Q: :init 是加载包后立刻执行，:config 在 :init 后执行，导致 cnfonts 先创建了 profile1
+  ;;    并没有用上 :config 中用户自定义配置
+  ;; (cnfonts-mode 1)
   ;; `cnfonts-set-font' 帮助我们应用当前字体大小配置
-  (cnfonts-set-font)
+  ;; (cnfonts-set-font)
 
   :config
   (setq cnfonts-directory (concat doom-user-dir "modules/personal/fonts/cnfonts/")
