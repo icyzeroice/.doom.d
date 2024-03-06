@@ -27,7 +27,7 @@
 
 ;; https://github.com/tumashu/cnfonts
 (use-package! cnfonts
-  :defer t
+  :defer nil
   :init
   (cnfonts-mode 1)
   ;; `cnfonts-set-font' 帮助我们应用当前字体大小配置
