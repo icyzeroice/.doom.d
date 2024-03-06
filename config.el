@@ -45,7 +45,7 @@
   ;; org-export-with-tags nil
   ;; `org-capture-templates': when relative path, file is created under `org-directory'
   (defun random-uuid-org-file (path) (concat org-directory path (org-id-uuid) ".org"))
-  (setq org-capture-templates `(("n" "Personal notes" entry (file (lambda () (random-uuid-org-file "entities/"))) "\n\n* Appendix\n** Keywords\n- %?\n%i" :prepend t)))
+  (setq org-capture-templates `(("n" "Personal notes" entry (file (lambda () (random-uuid-org-file "entities/"))) "\n#+MY_KEYWORDS: ,%?\n%i" :prepend t)))
   )
 
 ;; >>> [org-roam] >>>
